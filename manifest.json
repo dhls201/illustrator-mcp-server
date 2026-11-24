@@ -3,7 +3,7 @@
   "name": "Illustrator MCP",
   "version": "1.2.10",
   "display_name": "Design Bridge by IE3",
-  "description": "Work with Adobe Illustrator from Claude — read, create, edit and export Illustrator documents (SVG, PNG, JPG, PDF) and run pre-press checks. 68 tools. Not affiliated with Adobe.",
+  "description": "Work with Adobe Illustrator from Claude — read, create, edit and export Illustrator documents (SVG, PNG, JPG, PDF) and run pre-press checks. 69 tools. Not affiliated with Adobe.",
   "long_description": "Design Bridge by IE3 connects Claude to Adobe Illustrator running on your Mac or Windows PC (Illustrator 2020 or later; tested on 2024 and later).\n\n- **Understand documents**: layers, artboards, colors and swatches, text with font details, placed images with effective resolution, overprint and separations.\n- **Create and edit artwork**: shapes, paths, text with tracking, alignment and leading, gradients, symbols and images; align, group, recolor and restyle; size variations and style guides.\n- **Export**: SVG, PNG and JPG by artboard, selection or object, and print-ready PDF with presets and trim marks.\n- **Pre-press checks**: RGB in CMYK, broken links, low-resolution images, white overprint, missing fonts and PDF/X issues.\n\nFiles are never overwritten and unsaved changes are never discarded unless you ask. Everything runs locally; the only network request is a version check against the npm registry at startup, which can be turned off with ILLUSTRATOR_MCP_NO_UPDATE_CHECK=1. Not affiliated with or endorsed by Adobe.",
   "author": {
     "name": "cyocun(IE3)",
@@ -81,6 +81,8 @@
     { "name": "move_to_layer", "description": "Move objects to a different layer" },
     { "name": "delete_objects", "description": "Delete objects by UUID" },
     { "name": "create_crop_marks", "description": "Create crop marks (trim marks) on artboards" },
+    { "name": "make_trap_stroke", "description": "Add an overprinting stroke in the fill color to trap filled paths" },
+    { "name": "toggle_prepress_view", "description": "Toggle a prepress view or panel for visual inspection" },
     { "name": "import_svg_as_editable", "description": "Import an SVG file as editable paths/text/groups" },
     { "name": "set_illustrator_version", "description": "Choose which installed Illustrator version to control" },
     { "name": "apply_graphic_style", "description": "Apply a graphic style to objects" },
@@ -95,7 +97,8 @@
     { "name": "place_symbol", "description": "Place a symbol instance or replace symbol definition" },
     { "name": "create_path_text", "description": "Create text that flows along a path" },
     { "name": "select_objects", "description": "Select objects by UUID" },
-    { "name": "convert_coordinate", "description": "Convert a point between coordinate systems" }
+    { "name": "convert_coordinate", "description": "Convert a point between coordinate systems" },
+    { "name": "run_script", "description": "Execute raw ExtendScript/JSX without typed-tool safeguards" }
   ],
   "keywords": [
     "adobe-illustrator",

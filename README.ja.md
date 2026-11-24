@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-Adobe Illustrator のデザインデータを読み取り・操作・書き出しする [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) サーバー — 66 のツールを内蔵。
+Adobe Illustrator のデザインデータを読み取り・操作・書き出しする [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) サーバー — 69 のツールを内蔵。
 
 Claude などの AI アシスタントから Illustrator を直接操作し、Web 実装に必要なデザイン情報の取得や、印刷用データの確認・書き出しを行えます。
 
@@ -221,7 +221,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | 入手方法 | npm（`npx -y illustrator-mcp-server@latest`）または `.mcpb` のワンクリックインストール | Illustrator Beta に内蔵 — アプリの設定画面から認証キーと URL を取得し `mcp-remote` で接続 |
 | 対応バージョン | Illustrator 2024+ 検証済み / 2020+ 未検証（macOS / Windows） | Illustrator Beta 30.4+ のみ |
-| ツール数 | 66 | 約 40 |
+| ツール数 | 69 | 約 40 |
 | 既存ドキュメントの分析・一括処理 | ✅ 構造 / カラー / フォント分析、一括リカラー、バリエーション生成・データセット、全アートボード一括書き出し（`artboard:all`）、フォント / リンク切れチェック | ✅ 主要フォーカス |
 | オブジェクトのゼロからの作成 | ✅ フルセット — ドキュメント、図形、パス、テキストフレーム、パス上文字、グラデーション | ❌ 新規オブジェクト・テキストフレーム・ドキュメントの作成は不可 \* |
 | 保存 | ✅ `save_document`（保存 / 別名保存） | ❌ 書き出しのみ \* |
@@ -434,7 +434,7 @@ Claude Desktop のプロンプト一覧から選択できるワークフロー�
 
 </details>
 
-### ユーティリティ (4)
+### ユーティリティ (5)
 
 <details>
 <summary>クリックして展開</summary>
@@ -445,6 +445,7 @@ Claude Desktop のプロンプト一覧から選択できるワークフロー�
 | `check_text_consistency` | テキスト整合性チェック（ダミーテキスト検出、表記揺れパターン検出、全テキスト一覧） |
 | `set_workflow` | ワークフロー設定（Web/Print モード切り替え、自動検出された座標系のオーバーライド） |
 | `set_illustrator_version` | 複数の Illustrator がインストールされているときに使用するバージョンを指定 |
+| `run_script` | 型付きツールで表現できない任意の ExtendScript/JSX を実行。型検証、上書き保護、UUID 追跡、自動アンドゥをバイパスする |
 
 </details>
 

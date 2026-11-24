@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-Um servidor [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) para ler, manipular e exportar dados de design do Adobe Illustrator — com 66 ferramentas integradas.
+Um servidor [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) para ler, manipular e exportar dados de design do Adobe Illustrator — com 69 ferramentas integradas.
 
 Controle o Illustrator diretamente a partir de assistentes de IA como o Claude — extraia informações de design para implementação web, verifique dados prontos para impressão e exporte assets.
 
@@ -222,7 +222,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | Instalação | npm (`npx -y illustrator-mcp-server@latest`) ou instalação em um clique via `.mcpb` | Integrado ao Illustrator Beta — obtenha a chave de autenticação + URL nas configurações do app e conecte via `mcp-remote` |
 | Versões suportadas | Illustrator 2024+ verificado / 2020+ não verificado (macOS / Windows) | Apenas Illustrator Beta 30.4+ |
-| Número de ferramentas | 66 | ~40 |
+| Número de ferramentas | 69 | ~40 |
 | Análise e processamento em lote de documentos existentes | ✅ Análise de estrutura / cores / fontes, recolorização em massa, variações e conjuntos de dados, exportação em lote de pranchetas (`artboard:all`), preflight de fontes e links quebrados | ✅ Seu foco principal |
 | Criação de objetos do zero | ✅ Conjunto completo — documentos, formas, caminhos, quadros de texto, texto em caminho, gradientes | ❌ Sem novos objetos, quadros de texto ou documentos \* |
 | Salvar documentos | ✅ `save_document` (salvar / salvar como) | ❌ Apenas exportação \* |
@@ -435,7 +435,7 @@ Templates de fluxo de trabalho pré-construídos, disponíveis no seletor de pro
 
 </details>
 
-### Utilitários (4)
+### Utilitários (5)
 
 <details>
 <summary>Clique para expandir</summary>
@@ -446,6 +446,7 @@ Templates de fluxo de trabalho pré-construídos, disponíveis no seletor de pro
 | `check_text_consistency` | Verificação de consistência de texto (detecção de placeholders, padrões de variação de grafia, listagem completa de texto para análise por LLM) |
 | `set_workflow` | Define o modo de fluxo de trabalho (web/print) para sobrescrever o sistema de coordenadas detectado automaticamente |
 | `set_illustrator_version` | Escolhe qual versão do Illustrator usar quando há várias instaladas |
+| `run_script` | Executa ExtendScript/JSX bruto para operações que as ferramentas tipadas não cobrem. Ignora validação, proteção contra sobrescrita, rastreamento de UUID e desfazer automático |
 
 </details>
 

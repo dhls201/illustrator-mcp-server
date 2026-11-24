@@ -4,7 +4,7 @@ Design tools for Adobe Illustrator: read, edit and export Illustrator documents 
 
 This plugin bundles:
 
-- **illustrator-mcp-server** — 66 MCP tools for reading document structure, colors, text and images, creating and modifying objects, exporting SVG/PNG/JPG/PDF, and pre-press checks. Started with `npx illustrator-mcp-server@latest`.
+- **illustrator-mcp-server** — 69 MCP tools for reading document structure, colors, text and images, creating and modifying objects, exporting SVG/PNG/JPG/PDF, running pre-press checks, and executing raw ExtendScript. Started with `npx illustrator-mcp-server@latest`.
 - **illustrator-preflight** skill — a pre-press workflow that checks a document before printing or handoff (RGB in CMYK, broken links, low-resolution images, white overprint, fonts, PDF/X).
 
 ## Requirements

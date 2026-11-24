@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-Un serveur [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) pour lire, manipuler et exporter les données de conception Adobe Illustrator — avec 66 outils intégrés.
+Un serveur [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) pour lire, manipuler et exporter les données de conception Adobe Illustrator — avec 69 outils intégrés.
 
 Pilotez Illustrator directement depuis des assistants IA comme Claude — extrayez les informations de conception pour l'implémentation web, vérifiez les données prêtes à l'impression et exportez vos assets.
 
@@ -222,7 +222,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | Installation | npm (`npx -y illustrator-mcp-server@latest`) ou installation en un clic via `.mcpb` | Intégré à Illustrator Beta — récupérez une clé d'authentification + URL dans les réglages de l'application, connexion via `mcp-remote` |
 | Versions prises en charge | Illustrator 2024+ vérifié / 2020+ non vérifié (macOS / Windows) | Illustrator Beta 30.4+ uniquement |
-| Nombre d'outils | 66 | ~40 |
+| Nombre d'outils | 69 | ~40 |
 | Analyse & traitement par lot de documents existants | ✅ Analyse de structure / couleurs / polices, recoloration en masse, déclinaisons & jeux de données, export par lot des plans de travail (`artboard:all`), preflight polices & liens manquants | ✅ Son axe principal |
 | Création d'objets à partir de zéro | ✅ Ensemble complet — documents, formes, tracés, blocs de texte, texte sur tracé, dégradés | ❌ Pas de nouveaux objets, blocs de texte ni documents \* |
 | Enregistrement des documents | ✅ `save_document` (enregistrer / enregistrer sous) | ❌ Export uniquement \* |
@@ -435,7 +435,7 @@ Des modèles de workflow prédéfinis sont disponibles dans le sélecteur de pro
 
 </details>
 
-### Utilitaires (4)
+### Utilitaires (5)
 
 <details>
 <summary>Cliquez pour déployer</summary>
@@ -446,6 +446,7 @@ Des modèles de workflow prédéfinis sont disponibles dans le sélecteur de pro
 | `check_text_consistency` | Vérification de cohérence du texte (détection de texte de remplissage, variations de notation, liste complète du texte pour analyse par le LLM) |
 | `set_workflow` | Définit le mode workflow (web/print) pour outrepasser le système de coordonnées détecté automatiquement |
 | `set_illustrator_version` | Choisit la version d'Illustrator à utiliser lorsque plusieurs sont installées |
+| `run_script` | Exécute du ExtendScript/JSX brut pour les opérations non couvertes par les outils typés. Contourne la validation, la protection contre l'écrasement, le suivi des UUID et l'annulation automatique |
 
 </details>
 

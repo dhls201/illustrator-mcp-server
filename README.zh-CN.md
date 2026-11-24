@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-一个用于读取、操作和导出 Adobe Illustrator 设计数据的 [MCP（Model Context Protocol）](https://modelcontextprotocol.io/) 服务器 —— 内置 66 个工具。
+一个用于读取、操作和导出 Adobe Illustrator 设计数据的 [MCP（Model Context Protocol）](https://modelcontextprotocol.io/) 服务器 —— 内置 69 个工具。
 
 通过 Claude 等 AI 助手直接控制 Illustrator —— 提取设计信息用于 Web 实现、验证印前数据、导出素材资源。
 
@@ -222,7 +222,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | 获取方式 | npm（`npx -y illustrator-mcp-server@latest`）或一键安装 `.mcpb` | 内置于 Illustrator Beta —— 在应用设置中获取认证密钥和 URL，通过 `mcp-remote` 连接 |
 | 支持版本 | Illustrator 2024+ 已验证 / 2020+ 未验证（macOS / Windows） | 仅限 Illustrator Beta 30.4+ |
-| 工具数量 | 66 | 约 40 |
+| 工具数量 | 69 | 约 40 |
 | 现有文档的分析与批量处理 | ✅ 结构 / 颜色 / 字体分析、批量重新配色、变体生成与数据集、全画板批量导出（`artboard:all`）、字体 / 链接缺失预检 | ✅ 主要专注领域 |
 | 从零创建对象 | ✅ 全套 —— 文档、图形、路径、文本框、路径文字、渐变 | ❌ 无法创建新对象、文本框或文档 \* |
 | 保存文档 | ✅ `save_document`（保存 / 另存为） | ❌ 仅支持导出 \* |
@@ -435,7 +435,7 @@ Claude:  → check_contrast (auto_detect: true)
 
 </details>
 
-### 实用工具 (4)
+### 实用工具 (5)
 
 <details>
 <summary>点击展开</summary>
@@ -446,6 +446,7 @@ Claude:  → check_contrast (auto_detect: true)
 | `check_text_consistency` | 文本一致性检查（占位符检测、写法不一致模式识别、提供完整文本列表供 LLM 分析） |
 | `set_workflow` | 设置工作流模式（web/print），覆盖自动检测的坐标系 |
 | `set_illustrator_version` | 安装了多个版本时，指定要使用的 Illustrator 版本 |
+| `run_script` | 执行现有类型化工具无法表达的任意 ExtendScript/JSX；绕过类型校验、覆盖保护、UUID 跟踪和自动撤销 |
 
 </details>
 

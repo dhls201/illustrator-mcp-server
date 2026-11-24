@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-Ein [MCP-Server (Model Context Protocol)](https://modelcontextprotocol.io/) zum Auslesen, Bearbeiten und Exportieren von Adobe-Illustrator-Designdaten — mit 66 integrierten Werkzeugen.
+Ein [MCP-Server (Model Context Protocol)](https://modelcontextprotocol.io/) zum Auslesen, Bearbeiten und Exportieren von Adobe-Illustrator-Designdaten — mit 69 integrierten Werkzeugen.
 
 Steuere Illustrator direkt aus KI-Assistenten wie Claude — extrahiere Designinformationen für die Webumsetzung, prüfe druckfertige Daten und exportiere Assets.
 
@@ -222,7 +222,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | Installation | npm (`npx -y illustrator-mcp-server@latest`) oder `.mcpb` per Ein-Klick-Installation | In Illustrator Beta integriert — Auth-Schlüssel + URL in den App-Einstellungen abrufen, Verbindung über `mcp-remote` |
 | Unterstützte Versionen | Illustrator 2024+ verifiziert / 2020+ unverifiziert (macOS / Windows) | Nur Illustrator Beta 30.4+ |
-| Anzahl der Werkzeuge | 66 | ca. 40 |
+| Anzahl der Werkzeuge | 69 | ca. 40 |
 | Analyse & Stapelverarbeitung bestehender Dokumente | ✅ Struktur- / Farb- / Schriftanalyse, Massen-Umfärbung, Varianten & Datensätze, Stapel-Export aller Zeichenflächen (`artboard:all`), Preflight für Schriften & defekte Verknüpfungen | ✅ Sein Hauptfokus |
 | Objekte von Grund auf erstellen | ✅ Kompletter Satz — Dokumente, Formen, Pfade, Textrahmen, Pfadtext, Verläufe | ❌ Keine neuen Objekte, Textrahmen oder Dokumente \* |
 | Dokumente speichern | ✅ `save_document` (Speichern / Speichern unter) | ❌ Nur Export \* |
@@ -435,7 +435,7 @@ Vorgefertigte Workflow-Vorlagen stehen im Prompt-Picker von Claude Desktop zur V
 
 </details>
 
-### Utility (4)
+### Utility (5)
 
 <details>
 <summary>Zum Aufklappen klicken</summary>
@@ -446,6 +446,7 @@ Vorgefertigte Workflow-Vorlagen stehen im Prompt-Picker von Claude Desktop zur V
 | `check_text_consistency` | Textkonsistenzprüfung (Platzhaltererkennung, Schreibweisen-Abweichungen, vollständige Textauflistung für LLM-Analyse) |
 | `set_workflow` | Workflow-Modus setzen (web/print), um das automatisch erkannte Koordinatensystem zu überschreiben |
 | `set_illustrator_version` | Festlegen, welche Illustrator-Version verwendet wird, wenn mehrere installiert sind |
+| `run_script` | Führt rohes ExtendScript/JSX für Vorgänge aus, die typisierte Werkzeuge nicht abbilden. Umgeht Typprüfung, Überschreibschutz, UUID-Verfolgung und automatisches Rückgängigmachen |
 
 </details>
 

@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-Un servidor [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) para leer, manipular y exportar datos de diseño de Adobe Illustrator — con 66 herramientas integradas.
+Un servidor [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) para leer, manipular y exportar datos de diseño de Adobe Illustrator — con 69 herramientas integradas.
 
 Controla Illustrator directamente desde asistentes de IA como Claude — extrae información de diseño para implementación web, verifica datos listos para imprenta y exporta recursos.
 
@@ -222,7 +222,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | Instalación | npm (`npx -y illustrator-mcp-server@latest`) o instalación en un clic con `.mcpb` | Integrado en Illustrator Beta — obtén una clave de autenticación + URL en los ajustes de la app y conéctate vía `mcp-remote` |
 | Versiones compatibles | Illustrator 2024+ verificado / 2020+ sin verificar (macOS / Windows) | Solo Illustrator Beta 30.4+ |
-| Número de herramientas | 66 | ~40 |
+| Número de herramientas | 69 | ~40 |
 | Análisis y procesamiento por lotes de documentos existentes | ✅ Análisis de estructura / color / fuentes, recoloreado masivo, variaciones y conjuntos de datos, exportación por lotes de mesas de trabajo (`artboard:all`), preflight de fuentes y enlaces rotos | ✅ Su enfoque principal |
 | Creación de objetos desde cero | ✅ Conjunto completo — documentos, formas, trazados, marcos de texto, texto en trazado, degradados | ❌ Sin nuevos objetos, marcos de texto ni documentos \* |
 | Guardar documentos | ✅ `save_document` (guardar / guardar como) | ❌ Solo exportación \* |
@@ -435,7 +435,7 @@ Plantillas de flujo de trabajo preconstruidas disponibles en el selector de prom
 
 </details>
 
-### Utilidades (4)
+### Utilidades (5)
 
 <details>
 <summary>Haz clic para expandir</summary>
@@ -446,6 +446,7 @@ Plantillas de flujo de trabajo preconstruidas disponibles en el selector de prom
 | `check_text_consistency` | Verificación de consistencia de texto (detección de texto de relleno, patrones de variación de notación, listado completo de texto para análisis por LLM) |
 | `set_workflow` | Establece el modo de flujo de trabajo (web/print) para sobrescribir el sistema de coordenadas autodetectado |
 | `set_illustrator_version` | Elige qué versión de Illustrator usar cuando hay varias instaladas |
+| `run_script` | Ejecuta ExtendScript/JSX sin procesar para operaciones que las herramientas tipadas no cubren. Omite la validación, la protección contra sobrescritura, el seguimiento de UUID y la deshacer automática |
 
 </details>
 

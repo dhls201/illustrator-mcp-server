@@ -46,8 +46,8 @@ const DESTRUCTIVE = [
   'apply_graphic_style', 'apply_text_style', 'close_document', 'convert_to_outlines',
   'create_crop_marks', 'create_gradient', 'delete_objects', 'export', 'export_pdf', 'extract_design_tokens',
   'group_objects', 'manage_artboards', 'manage_datasets', 'manage_layers', 'manage_linked_images',
-  'make_trap_stroke', 'manage_swatches', 'modify_object', 'place_symbol', 'replace_color', 'save_document',
-  'undo', 'ungroup_objects',
+  'make_trap_stroke', 'manage_swatches', 'modify_object', 'place_symbol', 'replace_color', 'run_script',
+  'save_document', 'undo', 'ungroup_objects',
 ];
 
 describe('tool annotations (T12)', () => {
@@ -55,6 +55,7 @@ describe('tool annotations (T12)', () => {
 
   it('classifies every registered tool exactly once', () => {
     const listed = [...READ, ...ADDITIVE, ...ADDITIVE_IDEMPOTENT, ...DESTRUCTIVE].sort();
+    expect(listed).toHaveLength(69);
     expect(new Set(listed).size).toBe(listed.length);
     expect(listed).toEqual(Object.keys(all).sort());
   });

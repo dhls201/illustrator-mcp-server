@@ -30,6 +30,7 @@ import { register as registerPreflightCheck } from './utility/preflight-check.js
 import { register as registerCheckTextConsistency } from './utility/check-text-consistency.js';
 import { register as registerSetWorkflow } from './utility/set-workflow.js';
 import { register as registerSetIllustratorVersion } from './utility/set-illustrator-version.js';
+import { register as registerRunScript } from './utility/run-script.js';
 
 // Phase 4: 操作系ツール
 import { register as registerCreateRectangle } from './modify/create-rectangle.js';
@@ -109,6 +110,7 @@ export function registerAllTools(server: McpServer): void {
   registerCheckTextConsistency(server);
   registerSetWorkflow(server);
   registerSetIllustratorVersion(server);
+  registerRunScript(server);
 
   // Phase 4: 操作系
   registerCreateRectangle(server);

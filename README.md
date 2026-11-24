@@ -11,7 +11,7 @@
 [![MCP](https://img.shields.io/badge/MCP-Compatible-18181B.svg?style=flat-square&colorA=18181B)](https://modelcontextprotocol.io/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/cyocun)
 
-An [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server for reading, manipulating, and exporting Adobe Illustrator design data — with 66 built-in tools.
+An [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server for reading, manipulating, and exporting Adobe Illustrator design data — with 69 built-in tools.
 
 Control Illustrator directly from AI assistants like Claude — extract design information for web implementation, verify print-ready data, and export assets.
 
@@ -224,7 +224,7 @@ Claude:  → get_document_info → resize_for_variation
 |---|---|---|
 | Installation | npm (`npx -y illustrator-mcp-server@latest`) or one-click `.mcpb` install | Built into Illustrator Beta — get an auth key + URL from the app settings, connect via `mcp-remote` |
 | Supported versions | Illustrator 2024+ verified / 2020+ unverified (macOS / Windows) | Illustrator Beta 30.4+ only |
-| Number of tools | 66 | ~40 |
+| Number of tools | 69 | ~40 |
 | Analyzing & batch-processing existing documents | ✅ Structure / color / font analysis, bulk recolor, variations & datasets, batch artboard export (`artboard:all`), font & broken-link preflight | ✅ Its main focus |
 | Creating objects from scratch | ✅ Full set — documents, shapes, paths, text frames, path text, gradients | ❌ No new objects, text frames, or documents \* |
 | Saving documents | ✅ `save_document` (save / save-as) | ❌ Export only \* |
@@ -437,7 +437,7 @@ Pre-built workflow templates available in the Claude Desktop prompt picker.
 
 </details>
 
-### Utility (4)
+### Utility (5)
 
 <details>
 <summary>Click to expand</summary>
@@ -448,6 +448,7 @@ Pre-built workflow templates available in the Claude Desktop prompt picker.
 | `check_text_consistency` | Text consistency check (placeholder detection, notation variation patterns, full text listing for LLM analysis) |
 | `set_workflow` | Set workflow mode (web/print) to override auto-detected coordinate system |
 | `set_illustrator_version` | Choose which Illustrator version to use when several are installed |
+| `run_script` | Execute raw ExtendScript/JSX for operations the typed tools cannot express. It bypasses typed validation, overwrite protection, UUID tracking and automatic undo |
 
 </details>
 
